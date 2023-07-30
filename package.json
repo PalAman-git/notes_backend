@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build:ui": "rm -rf build && cd ../n_frontend && npm run build && cp -r build ../n_backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
