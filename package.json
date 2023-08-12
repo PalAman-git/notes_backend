@@ -8,7 +8,11 @@
     "dev": "nodemon index.js",
     "build:ui": "rm -rf build && cd ../n_frontend/ && npm run build && cp -r build ../n_backend",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest --verbose"
+  },
+  "engines": {
+    "node": ">=14.20.1"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +26,10 @@
   "devDependencies": {
     "eslint": "^8.46.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.28.0"
+    "eslint-plugin-import": "^2.28.0",
+    "jest": "^29.6.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
